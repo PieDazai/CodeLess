@@ -42,7 +42,7 @@ public abstract class Animals { //абстрактный класс. нелья�
     public void setName(String name) {
         this.name = name;
     }
-    public abstract void move();
+    public abstract void move(); //контракт
 }
 
 
