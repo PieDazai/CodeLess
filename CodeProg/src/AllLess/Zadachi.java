@@ -3,13 +3,12 @@ import java.util.Scanner;
 
 public class Zadachi {
     public static void main(String[] args) {
-        double summ = 0;
+    double summ = 0;
     double a = new Scanner(System.in).nextDouble();
     String str = new Scanner(System.in).nextLine().trim();
-    int maxLen = 50;
-    int len = str.length();
+    boolean is = str.length()<=50;
 
-if(a<2||a>16 || !str.startsWith("0.") || len > maxLen) System.exit(1);
+if(a<2||a>16 || !str.startsWith("0.") || !is) System.exit(1);
 
 str = str.replace("0." , "");
 for (int i = 0; i < str.length(); i++) {
@@ -22,7 +21,6 @@ for (int i = 0; i < str.length(); i++) {
     } else if (l >= 'a' && l <= 'f') {
         loc = l - 'a' + 10;
     }
-
     double ss = Math.pow(a, count);
     if(ss!=0) {
         double itog = loc * ss;
@@ -31,6 +29,5 @@ for (int i = 0; i < str.length(); i++) {
 }
         String result = String.format("%.5f", summ);
         System.out.println(result);
-
     }
 }
